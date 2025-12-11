@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Aim Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="game-container">
+
+    <h1>Auto Aim Game</h1>
+
+    <div class="stats">
+        Level: <span id="levelText">1</span> |
+        Poin: <span id="pointsText">0</span> |
+        Hasil: <span id="result">0</span>
+    </div>
+
+    <div class="controls">
+        <label>Kecepatan (m/s): <input id="speed" type="number" value="50"></label>
+        <label>Massa (kg): <input id="mass" type="number" value="1"></label>
+        <label>Gravitasi: <input id="gravity" type="number" value="9.8"></label>
+        <label>Drag: <input id="drag" type="number" value="0.1"></label>
+        <label>Diameter: <input id="diameter" type="number" value="0.5"></label>
+        <label>Target (m): <input id="target" type="number" value="100"></label>
+    </div>
+
+    <div class="controls2">
+        <label>Sudut (°): <input id="angle" type="number" value="45"></label>
+        <label>Mode:
+            <select id="mode">
+                <option value="physics">Roket</option>
+                <option value="basket">Basket</option>
+            </select>
+        </label>
+        Ring: <span id="ringPos">80</span> m
+    </div>
+
+    <div class="buttons">
+        <button id="shootBtn">Tembak</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <canvas id="trajectory" width="900" height="350"></canvas>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
